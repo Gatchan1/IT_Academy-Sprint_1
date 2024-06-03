@@ -10,6 +10,7 @@ public class NewsBasket extends News {
 		this.club = club;
 	}
 
+	@Override
 	public void calculateNewsPrice() {
 		int newPrice = 250;
 		if (competition.equalsIgnoreCase("Eurolliga")) {
@@ -21,6 +22,7 @@ public class NewsBasket extends News {
 		this.setPrice(newPrice);
 	}
 
+	@Override
 	public void calculateNewsScore() {
 		int newScore = 4;
 		if (competition.equalsIgnoreCase("Eurolliga")) {

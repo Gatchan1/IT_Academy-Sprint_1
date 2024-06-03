@@ -8,6 +8,7 @@ public class NewsF1 extends News {
 		this.squad = squad;
 	}
 
+	@Override
 	public void calculateNewsPrice() {
 		int newPrice = 100;
 		if (squad.equalsIgnoreCase("Ferrari") || squad.equalsIgnoreCase("Mercedes")) {
@@ -16,6 +17,7 @@ public class NewsF1 extends News {
 		this.setPrice(newPrice);
 	}
 
+	@Override
 	public void calculateNewsScore() {
 		int newScore = 4;
 		if (squad.equalsIgnoreCase("Ferrari") || squad.equalsIgnoreCase("Mercedes")) {

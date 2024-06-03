@@ -8,6 +8,7 @@ public class NewsMotorcycling extends News {
 		this.team = team;
 	}
 
+	@Override
 	public void calculateNewsPrice() {
 		int newPrice = 100;
 		if (team.equalsIgnoreCase("Honda") || team.equalsIgnoreCase("Yamaha")) {
@@ -16,6 +17,7 @@ public class NewsMotorcycling extends News {
 		this.setPrice(newPrice);
 	}
 
+	@Override
 	public void calculateNewsScore() {
 		int newScore = 3;
 		if (team.equalsIgnoreCase("Honda") || team.equalsIgnoreCase("Yamaha")) {

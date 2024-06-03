@@ -2,12 +2,11 @@ package n1exercici2;
 
 public class Car {
 	private static final String BRAND = "Ford";
-	private static String model;
-	private final int HORSEPOWER;
+	private static String model = "Focus";
+	private final int horsepower;
 
-	public Car(String model, int potencia) {
-		Car.model = model;
-		this.HORSEPOWER = potencia;
+	public Car(int potencia) {
+		this.horsepower = potencia;
 	}
 	
 	public static String getBRAND() {
@@ -21,8 +20,8 @@ public class Car {
 		Car.model = model;
 	}
 
-	public int getHORSEPOWER() {
-		return HORSEPOWER;
+	public int getHorsepower() {
+		return horsepower;
 	}
 
 	public static void brake() {

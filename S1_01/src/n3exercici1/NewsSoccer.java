@@ -12,6 +12,7 @@ public class NewsSoccer extends News {
 		this.player = player;
 	}
 
+	@Override
 	public void calculateNewsPrice() {
 		int newPrice = 300;
 		if (competition.equalsIgnoreCase("Lliga de Campions")) {
@@ -26,6 +27,7 @@ public class NewsSoccer extends News {
 		this.setPrice(newPrice);
 	}
 
+	@Override
 	public void calculateNewsScore() {
 		int newScore = 5;
 		if (competition.equalsIgnoreCase("Lliga de Campions")) {

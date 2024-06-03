@@ -10,6 +10,7 @@ public class NewsTennis extends News {
 		this.players = players;
 	}
 
+	@Override
 	public void calculateNewsPrice() {
 		int newPrice = 150;
 		if (players.contains("Federer") || players.contains("Nadal") || players.contains("Djokovic")) {
@@ -18,6 +19,7 @@ public class NewsTennis extends News {
 		this.setPrice(newPrice);
 	}
 
+	@Override
 	public void calculateNewsScore() {
 		int newScore = 4;
 		if (players.contains("Federer") || players.contains("Nadal") || players.contains("Djokovic")) {
