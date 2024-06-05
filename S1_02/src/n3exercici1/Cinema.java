@@ -36,6 +36,7 @@ public class Cinema {
 				break;
 			case 0:
 				System.out.println("Gracias por utilizar la aplicación.");
+				sortir = true;
 				break;
 			}
 		} while (!sortir);
