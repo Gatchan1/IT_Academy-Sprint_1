@@ -84,8 +84,12 @@ public class Input {
 			try {
 				System.out.println(message);
 				reading = sc.nextLine();
-				result = reading.charAt(0);
-				askUser = false;
+				if (reading.length() == 1) {
+					result = reading.charAt(0);
+					askUser = false;					
+				} else {
+					throw new Exception();
+				}
 			} catch (Exception e) {
 				System.out.println("Error en la introducción del dato.");
 			}
