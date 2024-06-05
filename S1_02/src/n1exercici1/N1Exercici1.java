@@ -13,9 +13,9 @@ public class N1Exercici1 {
 		System.out.println("Preu total després d'afegir producte: " + purchase1.getTotalPrice() + "\n");
 
 		try {
-			throw new ArrayIndexOutOfBoundsException();
-			//String[] numbers = { "uno", "dos", "tres" };
-			//System.out.println(numbers[3]);
+			//throw new ArrayIndexOutOfBoundsException();
+			String[] numbers = { "uno", "dos", "tres" };
+			System.out.println(numbers[3]);
 		} catch (ArrayIndexOutOfBoundsException e) {
 			System.out.println("La siguiente excepción ha sido lanzada: " + e); 
 		}
