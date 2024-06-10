@@ -4,8 +4,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.LinkedHashSet;
 
-import n2exercici1.Restaurant;
-
 public class N2Exercici2 {
 	public static void main(String[] args) {
 		ArrayList<Restaurant> restaurants = new ArrayList<Restaurant>();
