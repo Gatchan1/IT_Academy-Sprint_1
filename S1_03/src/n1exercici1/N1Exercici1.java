@@ -9,7 +9,7 @@ public class N1Exercici1 {
 		ArrayList<Month> months = createMonthsArray();
 		System.out.println("ArrayList sin agosto: \n"+ months + "\n");
 		
-		months.add(8, new Month("agosto"));
+		months.add(7, new Month("agosto"));
 		System.out.println("ArrayList con agosto: \n"+ months);
 		
 		HashSet<Month> monthsSet = createHashSet(months);
