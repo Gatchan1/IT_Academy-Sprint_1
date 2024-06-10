@@ -55,7 +55,7 @@ public class N1Exercici3 {
 
 		for (int i = 1; i <= 10; i++) {
 			int randomIndex = (int) Math.floor(Math.random() * numCountries);
-			System.out.println("answer is " + capitalCities.get(countries[randomIndex]));
+			//System.out.println("answer is " + capitalCities.get(countries[randomIndex]));
 			System.out.println("Question number " + i + ": Enter the capital city of " + countries[randomIndex] + ":");
 			String answer = sc.nextLine();
 			if (answer.equals(capitalCities.get(countries[randomIndex]))) {
