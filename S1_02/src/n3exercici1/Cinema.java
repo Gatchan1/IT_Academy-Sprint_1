@@ -100,7 +100,7 @@ public class Cinema {
 			int seatNum = enterSeatNumber();
 			String clientName = enterClientName();
 			seatsManagement.addSeat(new Seat(rowNum, seatNum, clientName));
-		} catch (ExceptionWrongRow | ExceptionWrongSeat | ExceptionWrongClientName e) {
+		} catch (ExceptionTakenSeat | ExceptionWrongRow | ExceptionWrongSeat | ExceptionWrongClientName e) {
 			System.out.println(e.getMessage());
 		}
 	}
@@ -142,7 +142,7 @@ public class Cinema {
 			int rowNum = enterRow();
 			int seatNum = enterSeatNumber();
 			seatsManagement.clearSeat(rowNum, seatNum);
-		} catch (ExceptionWrongRow | ExceptionWrongSeat e) {
+		} catch (ExceptionEmptySeat | ExceptionWrongRow | ExceptionWrongSeat e) {
 			System.out.println(e.getMessage());
 		}
 	}
