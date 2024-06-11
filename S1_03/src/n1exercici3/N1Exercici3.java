@@ -12,18 +12,19 @@ public class N1Exercici3 {
 
 	public static void main(String[] args) {
 		HashMap<String, String> capitalCities = new HashMap<String, String>();
-		capitalCities = readToHashMap("c:/Users/grake/OneDrive/Escritorio/countries.txt");
+		String homeDir = System.getProperty("user.home");
+		capitalCities = readToHashMap(homeDir + "/Documents/countries.txt");
 
 		if (capitalCities.size() != 0) {
 			String result = runCountriesGame(capitalCities);
 			System.out.println("This is your score: " + result);
-			writeToFile("c:/Users/grake/OneDrive/Escritorio/game_results.txt", result);
+			writeToFile(homeDir + "/Documents/game_results.txt", result);
 		} else {
 			System.out.println("There is no available countries data.");
 		}
 	}
 
-	static HashMap<String, String> readToHashMap(String filePath) {
+	private static HashMap<String, String> readToHashMap(String filePath) {
 		HashMap<String, String> pairs = new HashMap<String, String>();
 
 		try {
@@ -45,7 +46,7 @@ public class N1Exercici3 {
 		return pairs;
 	}
 
-	static String runCountriesGame(HashMap<String, String> capitalCities) {
+	private static String runCountriesGame(HashMap<String, String> capitalCities) {
 		int numCountries = capitalCities.size();
 		String[] countries = capitalCities.keySet().toArray(new String[numCountries]);
 
@@ -68,7 +69,7 @@ public class N1Exercici3 {
 		return (name + " " + points);
 	}
 
-	static void writeToFile(String filePath, String line) {
+	private static void writeToFile(String filePath, String line) {
 		try {
 			FileWriter writer = new FileWriter(filePath, true);
 			writer.write(line + "\n");

@@ -27,7 +27,7 @@ public class N1Exercici1 {
 		}
 	}
 	
-	static ArrayList<Month> createMonthsArray() {
+	private static ArrayList<Month> createMonthsArray() {
 		ArrayList<Month> months = new ArrayList<Month>();
 		months.add(new Month("enero"));
 		months.add(new Month("febrero"));
@@ -43,7 +43,7 @@ public class N1Exercici1 {
 		return months;
 	}
 	
-	static HashSet<Month> createHashSet(ArrayList<Month> months) {
+	private static HashSet<Month> createHashSet(ArrayList<Month> months) {
 		HashSet<Month> monthsSet = new HashSet<Month>();
 		for (Month month : months) {
 			monthsSet.add(month);
