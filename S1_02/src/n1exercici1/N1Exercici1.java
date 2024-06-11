@@ -5,12 +5,21 @@ public class N1Exercici1 {
 		Purchase purchase1 = new Purchase();
 		Product prod1 = new Product("patata", 1.25);
 
-		purchase1.calculateTotalPrice(); // EmptyPurchaseException test
+		try {
+			purchase1.calculateTotalPrice(); // EmptyPurchaseException test			
+		} catch (EmptyPurchaseException e) {
+			System.out.println(e.getMessage());
+		}
 
 		purchase1.addProduct(prod1);
 		System.out.println("\nPreu total abans d'afegir producte: " + purchase1.getTotalPrice());
-		purchase1.calculateTotalPrice();
-		System.out.println("Preu total després d'afegir producte: " + purchase1.getTotalPrice() + "\n");
+		
+		try {
+			purchase1.calculateTotalPrice();
+		} catch (EmptyPurchaseException e) {
+			System.out.println(e.getMessage());
+		}
+		System.out.println("Preu total després d'afegir producte: " + purchase1.getTotalPrice() + "\n");	
 
 		try {
 			//throw new ArrayIndexOutOfBoundsException();
