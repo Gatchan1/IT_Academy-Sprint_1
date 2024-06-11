@@ -75,7 +75,7 @@ public class Input {
 		return reading;
 	}
 
-	// capturing Exception class exceptions:
+	// capturing WrongFormatException class exceptions:
 	public static char readChar(String message) {
 		char result = 'a';
 		String reading;
@@ -88,10 +88,10 @@ public class Input {
 					result = reading.charAt(0);
 					askUser = false;					
 				} else {
-					throw new Exception();
+					throw new WrongFormatException("Ha de introducirse un solo caracter.");
 				}
-			} catch (Exception e) {
-				System.out.println("Error en la introducción del dato.");
+			} catch (WrongFormatException e) {
+				System.out.println(e.getMessage());
 			}
 		}
 		return result;
@@ -105,7 +105,7 @@ public class Input {
 				System.out.println(message);
 				reading = sc.nextLine();
 				askUser = false;
-			} catch (Exception e) {
+			} catch (RuntimeException e) {
 				System.out.println("Error en la introducción del dato.");
 			}
 		}
@@ -125,10 +125,10 @@ public class Input {
 				} else if (reading.equalsIgnoreCase("n")){
 					askUser = false;
 				} else {
-					throw new Exception();
+					throw new WrongFormatException("Caracter no válido.");
 				}
-			} catch (Exception e) {
-				System.out.println("Error en la introducción del dato.");
+			} catch (WrongFormatException e) {
+				System.out.println(e.getMessage());
 			}
 		}
 		return result;

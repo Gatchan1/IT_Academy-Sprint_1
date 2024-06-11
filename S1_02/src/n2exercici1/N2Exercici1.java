@@ -6,12 +6,16 @@ public class N2Exercici1 {
 		Input.readInt("Introduce un número entero:");
 		Input.readFloat("Introduce un número, puede llevar decimales (float):");
 		Input.readDouble("Introduce un número, puede llevar decimales (double):");
-		Input.readChar("Introduce un char:");
-		Input.readString("Introduce una string:");
-		if (Input.readYesNo("Introduce 's' o 'n':")) {
-			System.out.println("acepto");
-		} else {
-			System.out.println("rechazo");
+		try {
+			Input.readChar("Introduce un char:");			
+			Input.readString("Introduce una string:");
+			if (Input.readYesNo("Introduce 's' o 'n':")) {
+				System.out.println("acepto");
+			} else {
+				System.out.println("rechazo");
+			}
+		} catch (WrongFormatException e) {
+			System.out.println(e.getMessage());
 		}
 	}
 }
