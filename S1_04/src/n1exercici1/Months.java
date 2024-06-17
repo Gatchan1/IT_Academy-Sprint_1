@@ -10,7 +10,7 @@ public class Months {
 		System.out.println(months);
 	}
 	
-	static void insertMonths(ArrayList<String> list) {
+	public static void insertMonths(ArrayList<String> list) {
 		list.add("Enero");
 		list.add("Febrero");
 		list.add("Marzo");
