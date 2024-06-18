@@ -11,7 +11,7 @@ public class Main {
 		
 		List<String> newNames = filterAThreeLetters(names);
 
-		newNames.stream().forEach(System.out::println);
+		newNames.forEach(System.out::println);
 	}
 	
 	static List<String> filterAThreeLetters (List<String> str) {

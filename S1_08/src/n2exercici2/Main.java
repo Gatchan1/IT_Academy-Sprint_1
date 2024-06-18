@@ -9,7 +9,7 @@ public class Main {
 		int[] numsArray = { 2, 23, 44, 5, 10, 8 };
 		List<Integer> numbers = Arrays.stream(numsArray).boxed().toList();
 
-		eONumbers(numbers).stream().forEach(System.out::println);
+		eONumbers(numbers).forEach(System.out::println);
 	}
 
 	static List<String> eONumbers(List<Integer> nums) {
