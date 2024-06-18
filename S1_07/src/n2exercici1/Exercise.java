@@ -1,30 +1,27 @@
 package n2exercici1;
 
-import java.lang.annotation.*; 
+import com.google.gson.Gson;
+
+import java.io.FileWriter;
+import java.io.IOException;
 
 public class Exercise {
-	
-	@Target(ElementType.TYPE)
-	@interface JsonSerializable {
-		String jsonFolder() default "";
-	}
-	
-	@JsonSerializable (jsonFolder = "c:/Users/my_user/Documents/")
-	class Person {
-		private String name;
-		private String lastName;
-		public Person(String name, String lastName) {
-			this.name = name;
-			this.lastName = lastName;
-		}
-		
-		@Override
-		public String toString() {
-			return "Person [name=" + name + ", lastName=" + lastName + "]";
-		}
-	}
-	
+
 	public static void main(String[] args) {
-		
+		Person person = new Person("Raquel", "Barrio");
+		String folder;
+
+		Class<Person> personClass = Person.class;
+
+		try {
+			JsonSerializable jsonAnnotation = personClass.getAnnotation(JsonSerializable.class);
+			folder = jsonAnnotation.jsonFolder();
+			FileWriter writer = new FileWriter(folder + "json.json");
+			Gson gson = new Gson();
+			gson.toJson(person, writer);
+			writer.close();
+		} catch (SecurityException | IOException e) {
+			e.printStackTrace();
+		}
 	}
 }
