@@ -12,7 +12,7 @@ public class Main {
 		eONumbers(numbers).forEach(System.out::println);
 	}
 
-	static List<String> eONumbers(List<Integer> nums) {
+	private static List<String> eONumbers(List<Integer> nums) {
 		List<String> str = nums.stream().map(num -> {
 			char ch = num % 2 == 0 ? 'e' : 'o';
 			return ch + String.valueOf(num);

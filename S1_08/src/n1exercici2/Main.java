@@ -18,7 +18,7 @@ public class Main {
 		System.out.println("Array filtrado: " + filterOAndLength(array1));
 	}
 	
-	static List<String> filterOAndLength (List<String> strings) {
+	private static List<String> filterOAndLength (List<String> strings) {
 		return strings.stream()
 				.filter(elem -> elem.contains("o"))
 				.filter(elem -> elem.length() > 5)

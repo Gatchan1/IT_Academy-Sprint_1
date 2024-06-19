@@ -69,7 +69,7 @@ public class N3Exercici1 {
 		return option;
 	}
 
-	static void inputPerson() {
+	private static void inputPerson() {
 		System.out.println("Introduce el nombre de la persona:");
 		String name = input.nextLine();
 		System.out.println("Introduce su apellido:");
@@ -90,7 +90,7 @@ public class N3Exercici1 {
 		}
 	}
 	
-	static void sortAndPrint(Comparator<Person> comparator) {
+	private static void sortAndPrint(Comparator<Person> comparator) {
 		persons.sort(comparator);
 
 		System.out.println("___Nom___ _____Cognoms_____ ___NIF___ ");
@@ -99,7 +99,7 @@ public class N3Exercici1 {
 		}
 	}
 
-	static ArrayList<Person> parseCsvToPersonArray(String filePath) {
+	private static ArrayList<Person> parseCsvToPersonArray(String filePath) {
 		ArrayList<Person> persons = new ArrayList<Person>();
 		try (BufferedReader myBuffer = new BufferedReader(new FileReader(filePath))) {
 
@@ -117,7 +117,7 @@ public class N3Exercici1 {
 		return persons;
 	}
 	
-	static String formatPerson(Person person) {
+	private static String formatPerson(Person person) {
 		String name = person.getName();
 		int nameLength = name.length();
 		String surname = person.getSurname();

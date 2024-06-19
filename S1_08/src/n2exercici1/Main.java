@@ -14,7 +14,7 @@ public class Main {
 		newNames.forEach(System.out::println);
 	}
 	
-	static List<String> filterAThreeLetters (List<String> str) {
+	private static List<String> filterAThreeLetters (List<String> str) {
 		return str.stream()
 				.filter(s -> s.charAt(0) == 'A')
 				.filter(s -> s.length() == 3)

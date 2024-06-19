@@ -33,7 +33,7 @@ public class N2Exercici2 {
 		}
 	}
 	
-	static LinkedHashSet<Restaurant> createOrderedSet(ArrayList<Restaurant> restaurants){
+	private static LinkedHashSet<Restaurant> createOrderedSet(ArrayList<Restaurant> restaurants){
 		LinkedHashSet<Restaurant> restaurantsSet = new LinkedHashSet<Restaurant>();
 		for(Restaurant r:restaurants) {
 			restaurantsSet.add(r);

@@ -17,7 +17,7 @@ public class Main {
 		System.out.println("Array filtrado: " + filterO(array1));
 	}
 	
-	static List<String> filterO (List<String> strings) {
+	private static List<String> filterO (List<String> strings) {
 		return strings.stream()
 				.filter(elem -> elem.contains("o"))
 				.toList();
