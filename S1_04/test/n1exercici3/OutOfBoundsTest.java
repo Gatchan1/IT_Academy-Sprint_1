@@ -8,7 +8,7 @@ class OutOfBoundsTest {
 
 	@Test
 	void exceptionTesting() {
-		assertThrows(ArrayIndexOutOfBoundsException.class, () -> OutOfBounds.exceptionThrower());
+		assertThrows(ArrayIndexOutOfBoundsException.class, () -> OutOfBounds.getColor(4));
 	}
 
 }
