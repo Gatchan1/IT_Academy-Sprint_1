@@ -9,6 +9,6 @@ public class WorkerOnline extends Worker {
 
 	@Override
 	public double calculateWage(int workedHours) {
-		return workedHours * super.getHourPrice() + INTERNET_FARE;
+		return super.calculateWage(workedHours) + INTERNET_FARE;
 	}
 }

@@ -21,7 +21,7 @@ public class Exercise {
 			gson.toJson(person, writer);
 			writer.close();
 		} catch (SecurityException | IOException e) {
-			e.printStackTrace();
+			System.out.println("No se ha podido escribir en el archivo indicado.");
 		}
 	}
 }

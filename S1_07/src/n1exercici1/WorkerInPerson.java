@@ -13,6 +13,6 @@ public class WorkerInPerson extends Worker {
 
 	@Override
 	public double calculateWage(int workedHours) {
-		return workedHours * super.getHourPrice() + gas;
+		return super.calculateWage(workedHours) + gas;
 	}
 }
