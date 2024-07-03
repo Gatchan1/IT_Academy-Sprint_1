@@ -16,8 +16,7 @@ public class Main {
 	
 	private static List<String> filterAThreeLetters (List<String> str) {
 		return str.stream()
-				.filter(s -> s.charAt(0) == 'A')
-				.filter(s -> s.length() == 3)
+				.filter(s -> s.charAt(0) == 'A' && s.length() == 3)
 				.toList();
 	}
 

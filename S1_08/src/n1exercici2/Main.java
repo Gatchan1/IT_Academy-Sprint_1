@@ -20,8 +20,7 @@ public class Main {
 	
 	private static List<String> filterOAndLength (List<String> strings) {
 		return strings.stream()
-				.filter(elem -> elem.contains("o"))
-				.filter(elem -> elem.length() > 5)
+				.filter(elem -> elem.toLowerCase().contains("o") && elem.length() > 5)
 				.toList();
 	}
 }

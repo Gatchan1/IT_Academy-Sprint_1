@@ -6,7 +6,7 @@ import java.util.List;
 public class Main {
 	public static void main(String[] args) {
 		List<String> array1 = new ArrayList<String>();
-		array1.add("hola");
+		array1.add("hOla");
 		array1.add("que");
 		array1.add("tal");
 		array1.add("hasta");
@@ -19,7 +19,7 @@ public class Main {
 	
 	private static List<String> filterO (List<String> strings) {
 		return strings.stream()
-				.filter(elem -> elem.contains("o"))
+				.filter(elem -> elem.toLowerCase().contains("o"))
 				.toList();
 	}
 }
