@@ -7,7 +7,7 @@ Para compilar cada programa necesitas tener instalado el Java Development Kit (J
 Para poder ejecutar cada ejercicio son necesarios dos pasos:
 ### 1) Compilación:
 Ejecuta el siguiente comando:
-<br>***javac src/n1exercici1/*.java -d classes***
+<br>***javac src/n1exercici1/\*.java -d classes***
 <br>Se compilarán solo los archivos .java que están dentro del package n1exercici1, y se almacenarán dentro de la carpeta "classes".
 <br>(Si lo que quieres ejecutar es un ejercicio diferente, en lugar de n1exercici1 escribe n1exercici2, o el que quieras, y tenlo en cuenta también para los siguientes comandos propuestos en esta guía)
 
