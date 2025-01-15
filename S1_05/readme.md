@@ -25,3 +25,23 @@ Ejecuta el siguiente comando:
 <br>Si queremos añadir algún argumento, el comando ejecutado tendría esta estructura:
 <br>_java -cp classes nombre-de-package.NombreDeClaseQueContieneMetodoMain argumento1 argumento2_
 
+---
+
+# Exercise Guidelines
+These exercises need to be executed through the command line, and not through the IDE as we usually do. Thus, part of the goal hear was to make an explanation on how to execute the exercises. 
+
+# Level 1
+- ## Exercise 1
+    Create a class that lists the contents of a directory received by parameter alphabetically.
+
+- ## Exercise 2
+    Add to the class of the previous exercise, the functionality of listing a directory tree with the content of all its levels (recursively) so that they are printed on screen in alphabetical order within each level, also indicating if it is a directory (D) or a file (F), and its last modification date.
+
+- ## Exercise 3
+    Modify the previous exercise. Now, instead of showing the result on the screen, save the result in a TXT file.
+
+- ## Exercise 4
+    Add the functionality of reading any TXT file and display its content per console.
+
+- ## Exercise 5
+    The program must now serialize a Java Object to a .ser file and then deserialize it.
